@@ -1,1 +1,1 @@
-add_executable(main main.cpp)
+add_executable(ALDS1_1_A main.cpp)
