@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
+
+// 挿入ソート(Insert Sort)
 
 using namespace std;
 
@@ -33,9 +34,6 @@ void insertSort(int *A, int N)
     }
 }
 
-// cl /EHsc ALDS1_1_A.cpp
-// .\ALDS1_1_A.exe < ALDS1_1_A_in1.txt
-//
 int main(int argc, char *argv[])
 {
     cin.tie(0);
