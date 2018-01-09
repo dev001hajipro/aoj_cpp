@@ -9,7 +9,7 @@ const int MAX = 200;
 // stack
 class Stack
 {
-  public:
+public:
     Stack() : top(0), S()
     {
     }
@@ -39,7 +39,7 @@ class Stack
         return top >= MAX - 1;
     }
 
-  private:
+private:
     // トップの値はスタックの要素数と等しい
     int top;
     int S[100];

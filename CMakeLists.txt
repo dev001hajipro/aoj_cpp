@@ -8,5 +8,6 @@ add_subdirectory(ALDS1_1_D)
 
 
 add_subdirectory(ALDS1_3_A)
+add_subdirectory(ALDS1_3_B)
 
 add_subdirectory(ITP1_1_B)
