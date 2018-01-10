@@ -11,3 +11,4 @@ add_subdirectory(ALDS1_3_A)
 add_subdirectory(ALDS1_3_B)
 
 add_subdirectory(ITP1_1_B)
+add_subdirectory(ALDS1_3_C)
