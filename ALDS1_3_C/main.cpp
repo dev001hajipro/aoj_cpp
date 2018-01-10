@@ -93,24 +93,32 @@ int main(int argc, char *argv[])
     ios::sync_with_stdio(false);
 
     init();
-    /*
-    insert(10);
-    insert(22);
-    insert(33);
-    insert(44);
 
-    printList();
-    */
     int n;
     cin >> n;
-    string command;
-    int key;
-    while (cin >> command >> key)
+    cin.ignore(); // 改行読み飛ばし
+
+    for (int i = 0; i < n; i++)
     {
-        if (command.compare("insert") == 0)
-            insert(key);
-        else if (command.compare("delete") == 0)
-            deleteKey(key);
+        string line;
+        getline(cin, line);
+
+        string::size_type pos = line.find(" ");
+        if (pos == string::npos)
+        {
+            if (line.find("F") == string::npos)
+                deleteLast();
+            else
+                deleteFirst();
+        }
+        else
+        {
+            int key = atoi(line.substr(pos+1).c_str());
+            if (line.find("insert") == 0)
+                insert(key);
+            else
+                deleteKey(key);
+        }
     }
     printList();
     cleanList();
