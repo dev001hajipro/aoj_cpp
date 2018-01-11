@@ -16,7 +16,6 @@ ALDS1_3_B キューの実装
 ALDS1_3_C リンクトリスト
 
 
-
 ### [Tips] Ubuntuでclangをデフォルトにする方法
 - https://stackoverflow.com/questions/7031126/switching-between-gcc-and-clang-llvm-using-cmake
 
