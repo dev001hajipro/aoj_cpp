@@ -35,21 +35,29 @@ cinの入力について
 入力データが以下の場合、cin >> nは、9のみ読む。その後の改行コードを読まないので、
 cin.ignore()で、改行コードを読み捨てる。
 
+```
 9⏎
 insert 50⏎
 delete 10⏎
+```
 
-`
+```c++
     int n;
     cin >> n;     // ここで9を読む
     cin.ignore(); // 改行コードを読み捨てる
     string msg;
     getline(cin, msg); // getlineは改行コードを読み捨てる
-`
+```
 
 ### [整形]
 allman(BSD)スタイル。--suffix=noneで、ファイル上書き。
 これをしないとmain.cppの場合、main.cpp.orgが作成される。
-`
+
+```bash
 astyle --style=allman --suffix=none main.cpp
-`
+```
+
+### ファイル監視してmakeを実行する
+Linuxの場合、inotify-toolsをインストールして、bashを書けばよい。
+
+- https://qiita.com/sonodar/items/ddeeb98525ef4c03d48e
