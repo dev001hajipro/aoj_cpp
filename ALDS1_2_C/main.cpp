@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 
     selectionSort(A2, n);
     printArray(A2, n);
-    string ans = (isStable(A1, A1, n)) ? "Stable" : "Not Stable";
+    string ans = (isStable(A1, A2, n)) ? "Stable" : "Not Stable";
     cout << ans << endl;
     return 0;
 }
