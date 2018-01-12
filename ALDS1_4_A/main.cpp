@@ -6,17 +6,23 @@ using namespace std;
 const int MAX = 10000;
 
 // 線形探索
-
-int linearSearch(int *S, int n, int *T, int q)
+bool linearSearch(int *A, int n, int key)
 {
-    int sameCount = 0;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < q; j++)
-        {
-            if (S[i] == T[j])
-                sameCount++;
-        }
+        if (A[i] == key)
+            return true;
+    }
+    return false;
+}
+
+int search(int *S, int n, int *T, int q)
+{
+    int sameCount = 0;
+    for (int i = 0; i < q; i++)
+    {
+        if (linearSearch(S, n, T[i]))
+            sameCount++;
     }
     return sameCount;
 }
@@ -38,7 +44,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < q; i++)
         cin >> T[i];
 
-    cout << linearSearch(S,n,T,q) << endl;
+    cout << search(S,n,T,q) << endl;
 
     return 0;
 }
