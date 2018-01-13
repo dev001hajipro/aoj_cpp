@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    cout << "hello world" << endl;
+    cout << "XXXXXXXXXXXXXXXXXXhello worldXXXXXXXXXXXXX" << endl;
     return 0;
 }
 EOF
